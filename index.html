@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linux Commands Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9fc;
+      color: #333;
+      line-height: 1.8;
+      text-align: left;
+      padding: 0 20px;
+    }
+    header {
+      background: #2c3e50;
+      padding: 30px 20px;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+    nav.toc {
+      background: #f1f1f8;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    nav h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+    }
+    nav li {
+      margin: 10px 0;
+    }
+    nav a {
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #00796b;
+      font-weight: bold;
+    }
+    nav a:hover { color: #004d40; }
+    section {
+      background: #f9f9fc;
+      padding: 50px 0;
+      margin: 20px 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    section p {
+      font-size: 1.2em;
+      max-width: 1000px;
+      margin: 10px auto;
+      text-align: left;
+    }
+    img {
+      width: 100%;
+      max-width: 450px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    img:hover { transform: scale(1.05); }
+    footer {
+      background: #2c3e50;
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      margin-top: 40px;
+      font-size: 1em;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff7f50;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-size: 18px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .back-to-top:hover { background: #ff5722; }
+  </style>
+</head>
+<body>
+
+<header id="top">
+  <h1>Linux Commands Blog</h1>
+  <p>Everything you need to know about Linux terminal commands</p>
+</header>
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#directory-commands">📁 Directory Commands</a></li>
+    <li><a href="#file-commands">📄 File Commands</a></li>
+    <li><a href="#permissions">🔐 Permissions Commands</a></li>
+    <li><a href="#system-utility">⚙️ System & Utility Commands</a></li>
+    <li><a href="#redirection">🔁 Redirection Commands</a></li>
+    <li><a href="#yum-gcc">📦 YUM & GCC Commands</a></li>
+    <li><a href="#system-calls">🧠 System Calls</a></li>
+    <li><a href="#shell">💡 Shell Commands</a></li>
+  </ul>
+</nav>
+
+<!-- Sections Start -->
+
+<section id="directory-commands">
+  <h2>📁 Directory Commands</h2>
+  <p><code>ls</code> — List directory contents.</p>
+  <img src="images/ls.png" alt="ls command example">
+  <p><code>ls -a</code> — List all files including hidden ones.</p>
+  <img src="images/ls -a.png" alt="ls -a command example">
+  <p><code>pwd</code> — Show current directory.</p>
+  <img src="images/pwd.png" alt="pwd command example">
+  <p><code>cd /</code> — Go to root directory.</p>
+  <img src="images/cd slash.png" alt="cd / command">
+  <p><code>mkdir folder</code> — Create a directory.</p>
+  <img src="images/mk dir.png" alt="mkdir command">
+</section>
+
+<section id="file-commands">
+  <h2>📄 File Commands</h2>
+  <p><code>nano file.txt</code> — Edit file using nano editor.</p>
+  <img src="images/nano os.png" alt="nano editor">
+  <p><code>cat file.txt</code> — Display file contents.</p>
+  <img src="images/cat.png" alt="cat command">
+</section>
+
+<section id="permissions">
+  <h2>🔐 Permissions Commands</h2>
+  <p><code>chmod 755 filename</code> — Change file permissions.</p>
+  <img src="images/ls -l.png" alt="ls -l permissions">
+</section>
+
+<section id="system-utility">
+  <h2>⚙️ System & Utility Commands</h2>
+  <p><code>uname -a</code> — System info.</p>
+  <img src="images/uname -a.jpg" alt="uname command">
+</section>
+
+<section id="redirection">
+  <h2>🔁 Redirection Commands</h2>
+  <p><code>echo Hello > file.txt</code> — Redirect output to file.</p>
+  <img src="images/output overwrite.png" alt="output redirection">
+</section>
+
+<section id="yum-gcc">
+  <h2>📦 YUM & GCC Commands</h2>
+  <p><code>yum install packagename</code> — Install package using YUM.</p>
+  <p><code>gcc hello.c -o hello</code> — Compile C program.</p>
+  <img src="images/gcc.png" alt="gcc command">
+</section>
+
+<section id="system-calls">
+  <h2>🧠 System Calls</h2>
+  <p><code>fork()</code> — Create a new child process.</p>
+  <img src="images/fork.png" alt="fork system call">
+</section>
+
+<section id="shell">
+  <h2>💡 Shell Commands</h2>
+  <p><code>test -f filename</code> — Check if file exists.</p>
+  <img src="images/test.png" alt="test command">
+</section>
+
+<a href="#top" class="back-to-top">↑</a>
+
+<footer>
+  <p>© 2025 Linux Commands Blog. All Rights Reserved.</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
